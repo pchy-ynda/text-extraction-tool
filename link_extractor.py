@@ -14,7 +14,10 @@ def extract_links_from_html(html_content, base_url):
         try:
             href = link['href'].strip()
 
-            if href.lower.startswith(('#', 'mailto:', 'javascript:')):
+            if (
+                href.lower().startswith(('#', 'mailto:', 'javascript:', 'tel:', '')) or
+                href.lower().endswith(('.pdf', '.jpg', '.png', '.gif', '.docx', '.xlsx', '.zip'))
+                ):
                 continue
 
             abs_url = urljoin(base_url, href)
@@ -26,5 +29,4 @@ def extract_links_from_html(html_content, base_url):
         except Exception as e:
             print(f"Error processing link '{href}': {e}")
             continue
-
     return internal_links

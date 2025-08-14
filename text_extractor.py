@@ -1,9 +1,9 @@
 from bs4 import BeautifulSoup
 
-# Function to extract text from HTML content
+# Function to extract text from HTML content, saved to csv
 def extract_text_from_html(html_content):
 
-    # Construct a BeautifulSoup object
+    # Construct a BeautifulSoup obj
     soup = BeautifulSoup(html_content, 'html.parser')
 
     # Remove irrelevant tags and its contents
@@ -15,5 +15,3 @@ def extract_text_from_html(html_content):
     # Extract text
     text = soup.get_text(separator='\n', strip=True)
     return text
-
-# TODO: Add functinality to handle internal and redirect links from <a> tags

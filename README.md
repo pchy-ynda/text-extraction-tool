@@ -5,4 +5,4 @@ This is a tool that extracts text from an URL, written in Python and uses `reque
 ### How The Tool Works
 1. Insert the URL of a website.
 2. Tool extracts texts of all webpages inside it.
-3. Get a `.csv` file that displays the website's texts, with each spreadsheet corresponding to each webpage.
+3. Get a `.xlsx` file that displays the website's texts, with each spreadsheet corresponding to each webpage.

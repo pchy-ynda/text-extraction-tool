@@ -15,8 +15,9 @@ def extract_links_from_html(html_content, base_url):
             href = link['href'].strip()
 
             if (
-                href.lower().startswith(('#', 'mailto:', 'javascript:', 'tel:', '')) or
-                href.lower().endswith(('.pdf', '.jpg', '.png', '.gif', '.docx', '.xlsx', '.zip'))
+                href.lower().startswith(('#', 'mailto:', 'javascript:', 'tel:')) or
+                href.lower().endswith(('.webp', '.pdf', '.jpg', '.png', '.gif', '.docx', '.xlsx', '.zip'
+                                       , '.mp4', '.avi', '.mov', '.rar'))
                 ):
                 continue
 
